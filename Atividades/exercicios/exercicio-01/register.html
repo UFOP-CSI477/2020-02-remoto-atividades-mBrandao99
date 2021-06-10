@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="br" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Cadastrar</title>
+    </head>
+
+    <body>
+        <header>
+            <div>
+                <span><a href="home.html">Home</a></span> &nbsp;
+                <span><a href="home.html">Estados</a></span> &nbsp;
+                <span><a href="home.html">Cidades</a></span> &nbsp;
+                <span><a href="products.html">Produtos</a></span> &nbsp;
+                <span><a href="home.html">Pessoas</a></span> &nbsp;
+                <span><a href="home.html">Compras</a></span> &nbsp;
+                <span><a href="profile.html">Perfil</a></span> &nbsp;
+                <span><a href="report.html">Relatório</a></span> &nbsp;
+                <span><a href="register.html">Registrar</a></span> &nbsp;
+                <span><a href="home.html">Sair</a></span>        
+            </div>
+
+            <h1>Cadastro de usuário</h1>
+        </header>
+
+        <form method="POST"   action="">
+            <div>
+                <label for="name">Nome completo: </label>
+                <input type="text" name="name" id="name" placeholder="Nome e sobrenome">
+            </div>
+            <br>
+            <div>
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email" placeholder="Endereço de email válido">
+            </div>
+            <br>
+            <div>
+                <label for="address">Endereço: </label>
+                <input type="text" name="address" id="address" placeholder="Rua, Número, Bairro, Cidade, Estado">
+            </div>
+            <br>
+            <div>
+                <label>Gênero</label>
+                <div>
+                    <input type="radio" name="gender" id="feminino" value="F">
+                    <label for="feminino">Feminino</label>
+                </div>
+                <div>
+                    <input type="radio" name="gender" id="masculino" value="M">
+                    <label for="masculino">Masculino</label>
+                </div>
+                <div>
+                    <input type="radio" name="gender" id="naobinario" value="NB">
+                    <label for="naobinario">Não binário</label>
+                </div>
+                <div>
+                    <input type="radio" name="gender" id="semresposta" value="SR" checked="checked">
+                    <label for="semresposta">Prefiro não responder</label>
+                </div>
+            </div>
+            <br>
+            <div>
+                <label for="phone">Telefone: </label>
+                <input type="text" name="phone" id="phone" placeholder="DDD + número">
+            </div>
+            <br>
+            <div>
+                <label for="profileimage">Foto: </label>
+                <input type="file" name="profileimage" id="profileimage">
+            </div>
+            <br>
+
+            <div>
+                <input type="submit" value="Cadastrar">
+                <input type="reset" value="Limpar">
+            </div>
+            
+
+
+        </form>
+        <br><br>
+        <span><a href="home.html">Voltar</a></span>            
+        
+
+        
+    </body>
+</html>
