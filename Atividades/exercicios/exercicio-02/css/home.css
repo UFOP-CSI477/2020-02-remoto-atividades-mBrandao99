@@ -1,0 +1,24 @@
+html {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+.row {
+    display: flex;
+    border-radius: 10px;
+    max-width: 60%;
+    margin: auto;
+    border: solid rgb(189, 189, 189);
+    height: 100vh;
+    overflow:hidden;
+}
+  
+.main-body {
+    padding: 8px;
+    flex: 75%;
+}
+
+.left-body {
+    padding: 2px;
+    flex: 25%;
+    background-color: rgb(219, 219, 219);
+}

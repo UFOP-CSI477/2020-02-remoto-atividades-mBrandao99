@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="br" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Cadastrar</title>
+
+        <link rel="stylesheet" href="./css/register.css">
+        <link rel="stylesheet" href="./css/navbar.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    </head>
+
+    <body>
+        <header>
+            <div class="navbar">
+                <div class="navbar-item"><a href="home.html">Home</a></div>
+                <div class="navbar-item"><a href="home.html">Estados</a></div>
+                <div class="navbar-item"><a href="home.html">Cidades</a></div>
+                <div class="navbar-item"><a href="products.html">Produtos</a></div>
+                <div class="navbar-item"><a href="home.html">Pessoas</a></div>
+                <div class="navbar-item"><a href="home.html">Compras</a></div>
+                <div class="navbar-item"><a href="profile.html">Perfil</a></div>
+                <div class="navbar-item"><a href="report.html">Relatório</a></div>
+                <div class="navbar-item"><a href="register.html">Registrar</a></div>
+                <div class="navbar-item" id="sessionoptions"><a href="home.html">Sair</a></div>        
+            </div>
+
+            <h1 style="text-align:center;">Cadastro de usuário</h1>
+        </header>
+
+
+        <div class="row">
+            <div class="main-body"> 
+
+                <form method="POST"   action="">
+                    <div class="form-item">
+                        <label for="name">Nome completo: </label>
+                        <input type="text" name="name" id="name" placeholder="Nome e sobrenome">
+                    </div>
+ 
+                    <div class="form-item">
+                        <label for="email">Email: </label>
+                        <input type="email" name="email" id="email" placeholder="Endereço de email válido">
+                    </div>
+
+                    <div class="form-item">
+                        <label for="address">Endereço: </label>
+                        <input type="text" name="address" id="address" placeholder="Rua, Número, Bairro, Cidade, Estado">
+                    </div>
+
+                    <div class="form-item">
+                        <label>Gênero:</label>
+                        <div>
+                            <input type="radio" name="gender" id="feminino" value="F">
+                            <label for="feminino">Feminino</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="gender" id="masculino" value="M">
+                            <label for="masculino">Masculino</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="gender" id="naobinario" value="NB">
+                            <label for="naobinario">Não binário</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="gender" id="semresposta" value="SR" checked="checked">
+                            <label for="semresposta">Prefiro não responder</label>
+                        </div>
+                    </div>
+
+                    <div class="form-item">
+                        <label for="phone">Telefone: </label>
+                        <input type="text" name="phone" id="phone" placeholder="DDD + número">
+                    </div>
+
+                    <div class="form-item">
+                        <label for="profileimage">Foto: </label>
+                        <input type="file" name="profileimage" id="profileimage">
+                    </div>
+        
+                    <div class="form-item">
+                        <input type="submit" value="Cadastrar">
+                        <input type="reset" value="Limpar">
+                        <a href="home.html" class="return-button">Voltar</a>
+
+                    </div>
+
+                </form>
+            </div>
+    
+        </div>
+
+        
+                 
+        
+
+        
+    </body>
+</html>

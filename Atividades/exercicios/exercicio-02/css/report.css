@@ -1,0 +1,52 @@
+html {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+.row {
+    display: flex;
+    border-radius: 10px;
+    max-width: 60%;
+    margin: auto;
+    border: solid rgb(189, 189, 189);
+    height: 100vh;
+    overflow:hidden;
+}
+  
+.main-body {
+    padding: 8px;
+    flex: 100%;
+}
+
+caption {
+    font-size: 16pt;
+    font: Tahoma;
+    font-weight: bold;
+    font-style: italic;
+}
+
+table {
+    width: 100%;
+    overflow: hidden;
+}
+
+table, tr, td {
+    border: 1px solid rgb(0, 0, 0);
+}
+
+
+
+th, td {
+    padding: 10px;
+}
+
+th {
+    font-size: larger;
+}
+
+tbody td:hover {
+    background-color: rgb(98, 171, 204);
+}
+
+tr:nth-child(odd){
+    background-color: gainsboro;
+}

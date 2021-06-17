@@ -1,0 +1,88 @@
+html {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+.row {
+    display: flex;
+    border-radius: 10px;
+    max-width: 60%;
+    margin: auto;
+    border: solid rgb(189, 189, 189);
+    height: 100vh;
+}
+  
+.main-body {
+    padding: 8px;
+    flex: 100%;
+}
+
+.form-item label {
+    font-weight: bold;
+    font-size: large;
+}
+
+.form-item input[type="text"], .form-item input[type="email"]{
+    display: block;
+    width: 50%;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid 1px rgb(189, 189, 189);
+    font-size: medium;
+}
+
+form > div {
+    padding: 20px;
+}
+
+.form-item input[type="submit"]{
+    border-radius: 10px;
+    border: 0px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(49, 214, 49);
+    color: white;
+    font-size: medium;
+}
+
+.form-item input[type="submit"]:hover{
+    background-color: rgb(35, 156, 35);
+    cursor: pointer;
+}
+
+.form-item input[type="reset"] {
+    border-radius: 10px;
+    border: 0px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(196, 179, 26);
+    color: white;
+    font-size: medium;
+}
+
+.form-item input[type="reset"]:hover{
+    background-color: rgb(160, 146, 23);
+    cursor: pointer;
+}
+
+.return-button {
+    border-radius: 10px;
+    border: 0px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(236, 47, 47);
+    color: white;
+    text-decoration: none;
+    font-size: medium;
+}
+
+.return-button:hover{
+    background-color: rgb(160, 33, 33);
+    cursor: pointer;
+}
+
+
+
+

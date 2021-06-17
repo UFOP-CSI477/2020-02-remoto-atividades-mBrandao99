@@ -1,0 +1,27 @@
+.navbar {
+    display: flex;
+    margin: -8px;
+    background-color: deepskyblue;
+    border-bottom: solid royalblue;
+    justify-content: center;
+}
+
+.navbar-item {
+    padding: 10px;
+}
+
+.navbar-item:hover {
+    background-color: rgb(0, 155, 207) ;
+}
+
+.navbar-item a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-item a:hover {
+    color: #ff8800;
+}
+
+
+

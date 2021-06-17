@@ -1,0 +1,44 @@
+html {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+.row {
+    display: flex;
+    border-radius: 10px;
+    max-width: 60%;
+    margin: auto;
+    border: solid rgb(189, 189, 189);
+    height: 100vh;
+}
+  
+.main-body {
+    padding: 10px;
+    flex: 75%;
+}
+
+.left-body {
+    padding: 2px;
+    flex: 25%;
+}
+
+.profile-data {
+    overflow:hidden;
+    display: flex;
+    border-radius: 10px;
+    border: solid 2px rgb(189, 189, 189);
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.profile-data .data-label {
+    margin-right: 10px;    
+    width: 120px;
+    background-color: deepskyblue;
+    color: white;
+}
+
+.profile-data .data-value {
+    font-weight: 700;
+}
