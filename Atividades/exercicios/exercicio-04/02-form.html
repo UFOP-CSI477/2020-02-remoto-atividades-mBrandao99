@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Document</title>
+
+    <script>
+       'use strict'
+
+       function Person(name, surname, age, address) {
+           this.name = name;
+           this.age = age;
+           this.address = address;  
+           this.surname = surname;         
+       }
+
+        function insertFormData() {
+            const name = document.formData.name.value;
+            const surname = document.formData.surname.value;
+            const age = document.formData.age.value;
+            const address = document.formData.address.value;
+
+            const person = new Person(name, surname, age, address);
+
+            document.getElementById("fullname").innerHTML = person.name + " " + person.surname;
+            document.getElementById("age").innerHTML = person.age;
+            document.getElementById("address").innerHTML = person.address;
+
+            console.log(person);
+
+            window.alert(`Dados carregados com sucesso: ${name}`);
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <div class="container">
+        <div>
+            <p class="h2">Seus dados</p>
+            <b>
+                <div id="fullname">Ainda não inseriu</div>
+                <div id="age"></div>
+                <div id="address"></div>
+            </b>
+            <br>
+    
+        </div>
+    
+        <form action="post" name="formData">
+            <div class="form-group row mb-3">
+                <label class="col-sm-3 col-form-label" for="name">Nome: </label>
+                <div class="col-sm-3">
+                    <input class="form-control" type="text" name="name" id="name" placeholder="Nome">
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label class="col-sm-3 col-form-label" for="surname">Sobrenome: </label>
+                <div class="col-sm-3">
+                    <input class="form-control" type="text" name="surname" id="surname" placeholder="Sobrenome">
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label class="col-sm-3 col-form-label" for="age">Idade: </label>
+                <div class="col-sm-1">
+                    <input class="form-control" type="number" name="age" id="age" placeholder="">
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label class="col-sm-3 col-form-label" for="address">Endereço: </label>
+                <div class="col-sm-6">
+                    <input class="form-control" type="text" name="address" id="address" placeholder="Rua, Número, Bairro, Cidade, Estado">
+                </div>                        
+            </div>
+    
+        </form>
+        
+        <br>
+        <input class="btn btn-primary" type="button" value="Inserir dados do formulário" onclick="insertFormData()">
+    
+
+    </div>
+    
+</body>
+</html>

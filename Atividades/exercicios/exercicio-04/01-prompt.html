@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+       'use strict'
+
+       function Person(name, age, address) {
+           this.name = name;
+           this.age = age;
+           this.address = address;           
+       }
+
+        function insertData() {
+
+            const name = window.prompt("Insira seu nome:");
+            const age = window.prompt("Insira sua idade:");
+            const address = window.prompt("Insira seu endereço:");
+
+            const person = new Person(name, age, address);            
+ 
+            document.getElementById("name").innerHTML = person.name;
+            document.getElementById("age").innerHTML = person.age;
+            document.getElementById("address").innerHTML = person.address;
+
+            console.log(person);
+        }
+    </script>
+
+</head>
+<body>
+
+    <div>
+        <p>Seus dados:</p>
+        <div id="name">Ainda não inseriu</div>
+        <br>
+        <div id="age"></div>
+        <div id="address"></div>
+
+    </div>
+
+    <input type="button" value="Inserir Dados" onclick="insertData()">
+
+</body>
+</html>
