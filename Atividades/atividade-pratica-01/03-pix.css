@@ -1,0 +1,11 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.sizebtn {
+    width: 150px !important;
+}
+
+#resume {
+    visibility: hidden;
+}
