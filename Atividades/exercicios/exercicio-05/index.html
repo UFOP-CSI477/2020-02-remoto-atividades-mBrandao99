@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="br" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Cadastrar</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+        <script src="validation.js"></script>
+
+    </head>
+
+    <body onload="validation()">
+        <header>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                  <a class="nav-link active" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Estados</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Cidades</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Produtos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pessoas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Compras</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.html">Perfil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="report.html">Relatório</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="register.html">Registrar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sair</a>
+                </li>
+            </ul>       
+
+            <h1 style="text-align:center;">Cadastro de usuário</h1>
+        </header>
+
+
+        <div class="container">
+
+                <form method="POST" id="formData" name="formData" action="validar.php" style="width:50%;">
+                    <div class="form-group row mb-3" >
+                        <label class="col-sm-3 col-form-label" for="name">Nome completo: </label>
+                        <div class="col-sm-5">
+                            <input class="form-control" type="text" name="name" id="name" placeholder="Nome e sobrenome">
+                        </div>
+                    </div>
+ 
+                    <div class="form-group row mb-3">
+                        <label class="col-sm-3 col-form-label" for="email">Email: </label>
+                        <div class="col-sm-5">
+                            <input class="form-control" type="email" name="email" id="email" placeholder="Endereço de email válido">
+                        </div>                        
+                    </div>
+
+                    <div class="form-group row mb-3">
+                        <label class="col-sm-3 col-form-label" for="address">Endereço: </label>
+                        <div class="col-sm-9">
+                            <input class="form-control" type="text" name="address" id="address" placeholder="Rua, Número, Bairro, Cidade, Estado">
+                        </div>                        
+                    </div>
+
+                    <fieldset class="form-group mb-3">
+                        <div class="row">
+                            <legend class="col-form-label col-sm-3 pt-0">Gênero:</legend>
+                            <div class="col-sm-9">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gender" id="feminino" value="F">
+                                    <label class="form-check-label" for="feminino">Feminino</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gender" id="masculino" value="M">
+                                    <label class="form-check-label" for="masculino">Masculino</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gender" id="naobinario" value="NB">
+                                    <label class="form-check-label" for="naobinario">Não binário</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gender" id="semresposta" value="SR" checked="checked">
+                                    <label class="form-check-label" for="semresposta">Prefiro não responder</label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-group row mb-3">                        
+                        <label class="col-sm-3 col-form-label" for="phone">Telefone: </label>
+                        <div class="col-4">
+                            <input class="form-control" type="text" name="phone" id="phone" placeholder="DDD + número">
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-3">
+                        <label class="col-sm-3 col-form-label" for="profileimage">Foto: </label>
+                        <div class="col-5">
+                            <input class="form-control-file" type="file" name="profileimage" id="profileimage">
+                        </div>
+                    </div>
+        
+                    <div class="form-group">
+                        <input type="submit" value="Cadastrar" class="btn btn-primary">
+                        <input type="reset" value="Limpar" class="btn btn-warning">
+
+                    </div>
+
+                </form>
+    
+        </div>
+        
+    </body>
+</html>
