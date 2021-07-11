@@ -30,6 +30,8 @@ while ($p = $produtos->fetch()) {
 // echo "<br><br>";
 // var_dump($produtosObjects);
 
+$title = "Lista de estados e produtos";
+require "../App/Views/Header.php";
 
 require "../App/Views/Estados.php";
 echo "<br><br>";

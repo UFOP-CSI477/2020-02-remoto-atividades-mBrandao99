@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php
-    $title = "Lista de estados";
-    include("head.php");
-?>
-
 <body>
 
     <div class="container">
