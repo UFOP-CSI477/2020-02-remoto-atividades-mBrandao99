@@ -1,8 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EstadoController;
+use App\Http\Controllers\ProdutoController;
 use App\Models\Estado;
 use App\Models\Produto;
+use Illuminate\Routing\Route as RoutingRoute;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,34 +19,37 @@ use App\Models\Produto;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('principal');
+})->name('principal');
 
-Route::get('/ola', function() {
-    return "Olá, mundo!";
-});
+Route::resource('/estados', EstadoController::class);
+Route::resource('/produtos', ProdutoController::class);
 
-Route::get('/estados/todos', function() {
-    $estados = Estado::all();
-    return view('lista', [ 'dados' => $estados ]);
-});
+// Route::get('/ola', function() {
+//     return "Olá, mundo!";
+// });
 
-Route::get('estados/{id}', function ($id) {
-    $estado = Estado::findOrFail($id);
+// Route::get('/estados/todos', function() {
+//     $estados = Estado::all();
+//     return view('lista', [ 'dados' => $estados ]);
+// });
 
-    if($estado == null) {
-        return "ID inválido";
-    }
+// Route::get('estados/{id}', function ($id) {
+//     $estado = Estado::findOrFail($id);
 
-    return view('lista', [ 'dados' => $estado ]);
-});
+//     if($estado == null) {
+//         return "ID inválido";
+//     }
 
-Route::get('/produtos/todos', function() {
-    $produtos = Produto::all();
-    return view('lista', [ 'dados' => $produtos ]);
-});
+//     return view('lista', [ 'dados' => $estado ]);
+// });
 
-Route::get('produtos/{id}', function ($id) {
-    $produto = Produto::findOrFail($id);
-    return view('lista', [ 'dados' => $produto ]);
-});
+// Route::get('/produtos/todos', function() {
+//     $produtos = Produto::all();
+//     return view('lista', [ 'dados' => $produtos ]);
+// });
+
+// Route::get('produtos/{id}', function ($id) {
+//     $produto = Produto::findOrFail($id);
+//     return view('lista', [ 'dados' => $produto ]);
+// });
