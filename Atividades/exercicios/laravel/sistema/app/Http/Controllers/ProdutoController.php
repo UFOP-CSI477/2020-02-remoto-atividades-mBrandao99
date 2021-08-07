@@ -87,9 +87,13 @@ class ProdutoController extends Controller
      */
     public function destroy(Produto $produto)
     {
-        $produto->delete();
+        if ($produto->compras->count() > 0) {
+            session()->flash('mensagem', 'Exclusão não permitida! Existem compras associadas.');
+        } else {
+            $produto->delete();
+            session()->flash('mensagem', 'Produto excluído com sucesso!');
+        }
 
-        session()->flash('mensagem', 'Produto excluído com sucesso!');
         return redirect()->route('produtos.index');
     }
 }

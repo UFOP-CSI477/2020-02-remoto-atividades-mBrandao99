@@ -12,9 +12,9 @@
     </div>
 
     <div class="form-group row mb-3">
-        <label class="col-sm-3 col-form-label" for="um">Unidade Medida: </label>
+        <label class="col-sm-3 col-form-label" for="um">Unidade de medida: </label>
         <div class="col-sm-2">
-            <input class="form-control" type="text" name="um" id="um" placeholder="UM">
+            <input class="form-control" type="text" name="um" id="um" placeholder="kg, cm...">
         </div>
     </div>
 

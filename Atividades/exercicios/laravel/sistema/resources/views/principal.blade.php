@@ -22,22 +22,22 @@
             <header>
                 <ul class="nav justify-content-center">
                     <li class="nav-item">
-                    <a class="nav-link active" href="{{ route('principal') }}">Home</a>
+                        <a class="nav-link active" href="{{ route('principal') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="{{ route('estados.index') }}">Estados</a>
+                        <a class="nav-link" href="{{ route('estados.index') }}">Estados</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="/">Cidades</a>
+                        <a class="nav-link" href="{{ route('cidades.index') }}">Cidades</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="{{ route('produtos.index') }}">Produtos</a>
+                        <a class="nav-link" href="{{ route('produtos.index') }}">Produtos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/">Pessoas</a>
+                        <a class="nav-link" href="{{ route('pessoas.index') }}">Pessoas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/">Compras</a>
+                        <a class="nav-link" href="{{ route('compras.index') }}">Compras</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/">Perfil</a>

@@ -2,7 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EstadoController;
+use App\Http\Controllers\CidadeController;
+use App\Http\Controllers\PessoaController;
 use App\Http\Controllers\ProdutoController;
+use App\Http\Controllers\CompraController;
 use App\Models\Estado;
 use App\Models\Produto;
 use Illuminate\Routing\Route as RoutingRoute;
@@ -23,7 +26,21 @@ Route::get('/', function () {
 })->name('principal');
 
 Route::resource('/estados', EstadoController::class);
+Route::resource('/cidades', CidadeController::class);
+Route::resource('/pessoas', PessoaController::class);
 Route::resource('/produtos', ProdutoController::class);
+
+Route::get('/compras/relpessoa', [CompraController::class, 'relPessoa'])->name('compras.relpessoa');
+Route::get('/compras/relproduto', [CompraController::class, 'relProduto'])->name('compras.relproduto');
+Route::get('/compras/reldata', [CompraController::class, 'relData'])->name('compras.reldata');
+Route::resource('/compras', CompraController::class);
+
+
+
+// Route::get('/compras/relpessoa', function () {
+//     return "teste";
+// });
+
 
 // Route::get('/ola', function() {
 //     return "Olá, mundo!";
