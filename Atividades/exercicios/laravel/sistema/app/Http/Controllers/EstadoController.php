@@ -25,7 +25,7 @@ class EstadoController extends Controller
      */
     public function create()
     {
-        //
+        return view('estados.create');
     }
 
     /**
@@ -36,7 +36,16 @@ class EstadoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd($request);
+
+        // $estado = new Estado;
+        // $estado->nome = $request->name;
+        // $estado->sigla = $request->uf;
+        // $estado->save();
+
+        Estado::create($request->all());
+        session()->flash('mensagem', 'Estado cadastrado com sucesso!');
+        return redirect()->route('estados.index');
     }
 
     /**
@@ -47,7 +56,7 @@ class EstadoController extends Controller
      */
     public function show(Estado $estado)
     {
-        //
+        return view('estados.show', ['estado' => $estado]);
     }
 
     /**
@@ -58,7 +67,7 @@ class EstadoController extends Controller
      */
     public function edit(Estado $estado)
     {
-        //
+        return view('estados.edit', ['estado' => $estado]);
     }
 
     /**
@@ -70,7 +79,11 @@ class EstadoController extends Controller
      */
     public function update(Request $request, Estado $estado)
     {
-        //
+        $estado->fill($request->all());
+        $estado->save();
+
+        session()->flash('mensagem', 'Estado atualizado com sucesso!');
+        return redirect()->route('estados.index');
     }
 
     /**
@@ -81,6 +94,9 @@ class EstadoController extends Controller
      */
     public function destroy(Estado $estado)
     {
-        //
+        $estado->delete();
+
+        session()->flash('mensagem', 'Estado excluído com sucesso!');
+        return redirect()->route('estados.index');
     }
 }

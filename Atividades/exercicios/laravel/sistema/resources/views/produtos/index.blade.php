@@ -2,20 +2,23 @@
 
 @section('conteudo')
 
+<a href="{{ route('produtos.create') }}"> Cadastrar </a>
 <table class="table table-bordered table-hover table-striped">
     <thead class="table-dark">
         <tr>
-            <td>Id</td>
-            <td>Nome</td>
-            <td>Unidade de Medida</td>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Medida</th>
+            <th>Ações</th>
         </tr>
     </thead>
     <tbody>
-        @foreach($produtos as $p)
+        @foreach($produtos as $e)
             <tr>
-                <td>{{ $p->id }}</td>
-                <td>{{ $p->nome }}</td>
-                <td>{{ $p->um }}</td>
+                <td>{{ $e->id }}</td>
+                <td>{{ $e->nome }}</td>
+                <td>{{ $e->um }}</td>
+                <td><a href="{{ route('produtos.show', $e->id) }}">Exibir</a></td>
             </tr>
         @endforeach
     </tbody>
