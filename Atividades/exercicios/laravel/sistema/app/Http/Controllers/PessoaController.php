@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Pessoa;
 use App\Models\Cidade;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PessoaController extends Controller
 {
