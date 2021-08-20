@@ -20,6 +20,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'cpf',
+        'isAdmin',
     ];
 
     /**
@@ -29,6 +31,7 @@ class User extends Authenticatable
      */
     protected $hidden = [
         'password',
+        'isAdmin',
         'remember_token',
     ];
 
@@ -40,4 +43,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // 1 User -> N Passagens
+    public function passagems() {
+        return $this->hasMany(Passagem::class);
+    }
 }
