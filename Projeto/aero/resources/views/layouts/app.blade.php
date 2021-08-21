@@ -39,24 +39,32 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('empresas.index') }}">
-                                <i class="fas fa-building fa-lg"></i>
-                                Empresas
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('aeroportos.index') }}">
-                                <i class="fas fa-map-marked fa-lg"></i>
-                                Aeroportos
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('voos.index') }}">
-                                <i class="fas fa-plane fa-lg"></i>
-                                Voos
-                            </a>
-                        </li>
+                        @if (auth()->user() && auth()->user()->isAdmin)
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('empresas.index') }}">
+                                    <i class="fas fa-building fa-lg"></i>
+                                    Empresas
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('aeroportos.index') }}">
+                                    <i class="fas fa-map-marked fa-lg"></i>
+                                    Aeroportos
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('voos.index') }}">
+                                    <i class="fas fa-plane fa-lg"></i>
+                                    Voos
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('relatoriopv') }}">
+                                    <i class="fas fa-clipboard-list fa-lg"></i>
+                                    Relatório
+                                </a>
+                            </li>
+                        @endif
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -83,6 +91,9 @@
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('profile.index') }}">
                                         <i class="fas fa-user-circle fa-lg"></i>  Perfil
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('users.edit') }}">
+                                        <i class="fas fa-edit fa-lg"></i>  Editar dados
                                     </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();

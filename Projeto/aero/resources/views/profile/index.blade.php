@@ -34,7 +34,6 @@
                 <td>
                     <div class="btn-group" role="group">
                         <a class="btn btn-primary" href="{{ route('home.show', $p->voo_id) }}" role="button">Exibir</a>
-                        <a class="btn btn-warning" href="{{ route('voos.show', $p->id) }}" role="button">Remarcar</a>
                         <form name="frmDelete" id="frmDelete" action="{{ route('passagems.destroy', $p->id) }}" method="POST">
                             @csrf
                             @method('DELETE')

@@ -1,5 +1,5 @@
 # **CSI606-2020-02 - Remoto - Trabalho Final - Resultados**
-## *Aluna(o): Princesa Leia (Luke Skywalker)*
+## *Aluna(o): Marco Antônio Brandão Carvalho*
 
 --------------
 
@@ -7,19 +7,25 @@
 
 ### Resumo
 
-  (Apresentar um breve resumo sobre o seu trabalho, indicando o contexto e as principais funcionalidades.)
+    Meu trabalho se encaixa no contexto de sistemas de passagens áreas, a principal funcionalidade seria a compra/reserva de passagens.
+    Na tela principal, o usuário pode buscar por passagens para localidades de seu interesse, cada passagem leva o usuário à página de detalhes para que possa ser possível analisar os preços e fazer a compra. Os usuários com permissão mais elevada podem acessar os CRUDS das tabelas base, alterando os dados do sistema. O usuário pode cancelar suas passagens dentro do perfil.
 
 ### 1. Funcionalidades implementadas
-<!-- Descrever as funcionalidades que eram previstas e foram implementas. -->
+    Busca de voos
+    Registro e autenticação de usuário
+    CRUD das tabelas de empresa, aeroporto e voo
+    Cancelamento de passagem
   
 ### 2. Funcionalidades previstas e não implementadas
-<!-- Descrever as funcionalidades que eram previstas e não foram implementas, apresentando uma breve justificativa do porquê elas não foram incluídas -->
+    Remarcação de voos.
+    Filtros de intervalos, foi considerado datas fixas para filtragem da página principal. Durante o desenvolvimento notei que não fazia muito sentido a filtragem por horas, deixei o campo com a lógica similar a data.
 
 ### 3. Outras funcionalidades implementadas
 <!-- Descrever as funcionalidades implementas além daquelas que foram previstas, caso se aplique.  -->
 
 ### 4. Principais desafios e dificuldades
-<!-- Descrever os principais desafios encontrados no desenvolvimento do trabalho, quais foram as dificuldades e como elas foram superadas e resolvidas. -->
+    O CRUD da tabela principal de voos foi complexo de ser feito. Necessitou de recursos novos como o datetime picker, além da validação de todos os campos.
+    A interface acabou sendo uma dificuldade, não tenho muita prática com front-end e não tive muito tempo para me dedicar ao trabalho, acabei deixando ela bem simples, a organização dos elementos na tela provavelmente pode ser otimizada.
 
 ### 5. Instruções para instalação e execução
 <!-- Descrever o que deve ser feito para instalar (ou baixar) a aplicação, o que precisa ser configurando (parâmetros, banco de dados e afins) e como executá-la. -->
