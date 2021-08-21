@@ -14,7 +14,7 @@
     Busca de voos
     Registro e autenticação de usuário
     CRUD das tabelas de empresa, aeroporto e voo
-    Cancelamento de passagem
+    Compra e cancelamento de passagem
   
 ### 2. Funcionalidades previstas e não implementadas
     Remarcação de voos.
@@ -30,18 +30,23 @@
 
 ### 5. Instruções para instalação e execução
 <!-- Descrever o que deve ser feito para instalar (ou baixar) a aplicação, o que precisa ser configurando (parâmetros, banco de dados e afins) e como executá-la. -->
-    
-
-    WIP
-
+    Feito com Laravel Framework 8.54.0 e PHP 7.4.19. Banco de dados SQLite.
 
     Para puxar as bibliotecas e dependências necessárias, execute os comandos no terminal na raiz do projeto:
     composer require
     npm install
     
-    Como não fiz a criação de métodos fábrica para população das tabelas, vou estar linkando aqui o download da .env e do banco de dados para acesso imediato
+    Como não fiz a criação de métodos fábrica para popular as tabelas, vou estar linkando aqui o download da .env e do banco de dados para acesso imediato caso seja de interesse:
     https://mega.nz/file/70UhCA5R#M-RVxH5bebtsrFaqLLZuewBd4PmGhPMqw0jgj_D0BHc
     Administrador: marco@email.com 123
+
+    Em caso de configuração do zero, crie um banco .sqlite vazio e configure/adicione os parametros do banco no .env:
+        DB_CONNECTION=sqlite
+        DB_DATABASE= "caminho para o banco .sqlite"
+        DB_FOREIGN_KEYS=true
+    Os demais parametros de DB_ podem ser excluídos ou comentados.
+    Ao fim do arquivo, também adicione este:
+        SWEET_ALERT_ALWAYS_LOAD_JS=true
 
     Para dar acesso às funcionalidades administrativas a outros usuários, não existe uma solução direta nas páginas.
     Faço o registro de um usuário e execute a seguinte SQL no banco:

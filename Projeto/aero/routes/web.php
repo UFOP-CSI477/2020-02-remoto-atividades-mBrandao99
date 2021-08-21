@@ -36,9 +36,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Auth::routes();
 
-Route::resource('empresas', EmpresaController::class)->middleware('admin');;
-Route::resource('aeroportos', AeroportoController::class);
-Route::resource('voos', VooController::class);
+Route::resource('empresas', EmpresaController::class)->middleware('admin');
+Route::resource('aeroportos', AeroportoController::class)->middleware('admin');
+Route::resource('voos', VooController::class)->middleware('admin');
 Route::resource('passagems', PassagemController::class)->middleware('auth');
 
 Route::get('/relatorio', [RelatorioController::class, 'passagemVoo'])->name('relatoriopv');
