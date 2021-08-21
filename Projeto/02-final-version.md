@@ -22,7 +22,7 @@
 
 ### 3. Outras funcionalidades implementadas
     Relatório de passagens por voos.
-    Eu também queria ter conseguido tempo para fazer um sistema de comentários e avaliações para voos das empresas, a migration está presente no projeto porém não foi implementado.
+    Eu queria ter conseguido tempo para fazer um sistema de comentários e avaliações para voos das empresas, a migration está presente no projeto porém não foi implementado.
 
 ### 4. Principais desafios e dificuldades
     O CRUD da tabela principal de voos foi complexo de ser feito. Necessitou de recursos novos como o datetime picker, além da validação de todos os campos.
@@ -39,14 +39,18 @@
     composer require
     npm install
     
-    Como não fiz a criação de métodos fábrica para as tabelas, vou estar linkando aqui o download da .env e do banco de dados
-    .
-    Para dar acesso às funcionalidades administrativas, não existe uma solução direta nas páginas.
+    Como não fiz a criação de métodos fábrica para população das tabelas, vou estar linkando aqui o download da .env e do banco de dados para acesso imediato
+    https://mega.nz/file/70UhCA5R#M-RVxH5bebtsrFaqLLZuewBd4PmGhPMqw0jgj_D0BHc
+    Administrador: marco@email.com 123
+
+    Para dar acesso às funcionalidades administrativas a outros usuários, não existe uma solução direta nas páginas.
     Faço o registro de um usuário e execute a seguinte SQL no banco:
         update users
         set isAdmin = True
         where email = "EMAIL"
-    Onde EMAIL corresponde ao email do usuário registrado anteriormente.
+    Onde EMAIL corresponde ao email de um usuário registrado anteriormente.
 ### 6. Referências
+
+*Utilizei uma imagem genérica do google para fazer a logo do sistema, encontrei ela atrás de licensas em alguns sites mas livre em outros, então preferi não referenciar.*
 
 
