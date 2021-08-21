@@ -53,11 +53,15 @@
     Ao fim do arquivo, também adicione este:
         SWEET_ALERT_ALWAYS_LOAD_JS=true
 
+    Execute:
+        php artisan key:generate
+        php artisan migrate
+
     Para dar acesso às funcionalidades administrativas a outros usuários, não existe uma solução direta nas páginas.
     Faço o registro de um usuário e execute a seguinte SQL no banco:
         update users
         set isAdmin = True
-        where email = "EMAIL"
+        where email = "EMAIL";
     Onde EMAIL corresponde ao email de um usuário registrado anteriormente.
 
     Por fim, execute "php artisan serve" na raiz do projeto para inicializar o servidor.
