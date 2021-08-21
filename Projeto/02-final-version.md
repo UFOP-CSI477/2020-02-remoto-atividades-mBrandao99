@@ -27,6 +27,8 @@
 ### 4. Principais desafios e dificuldades
     O CRUD da tabela principal de voos foi complexo de ser feito. Necessitou de recursos novos como o datetime picker, além da validação de todos os campos.
     A interface acabou sendo uma dificuldade, não tenho muita prática com front-end e não tive muito tempo para me dedicar ao trabalho, acabei deixando ela bem simples, a organização dos elementos na tela provavelmente pode ser otimizada.
+    Alguns pontos não foram ajustados devido ao tempo, como um campo de pesquisa para estados e cidades ao invés de dropdowns, 
+    formatação correta dos campos de dinheiro dentro dos CRUDs, 
 
 ### 5. Instruções para instalação e execução
 <!-- Descrever o que deve ser feito para instalar (ou baixar) a aplicação, o que precisa ser configurando (parâmetros, banco de dados e afins) e como executá-la. -->
@@ -66,7 +68,8 @@
 
     Por fim, execute "php artisan serve" na raiz do projeto para inicializar o servidor.
 ### 6. Referências
+Os dados de estados e cidades foram retirados da API do IBGE, fiz a formatação e ajuste para se encaixar na minha aplicação.
 
-*Utilizei uma imagem genérica do google para fazer a logo do sistema, encontrei ela atrás de licensas em alguns sites mas livre em outros, então preferi não referenciar.*
+*Utilizei uma imagem genérica do google para fazer a logo do sistema, encontrei ela atrás de licenças em alguns sites mas livre em outros, então preferi não referenciar.*
 
 
