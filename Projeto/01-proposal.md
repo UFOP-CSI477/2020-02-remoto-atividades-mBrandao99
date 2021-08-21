@@ -29,6 +29,7 @@
     Neste trabalho não serão consideradas quantidades de passagens por voo. A ideia é apenas implementar funcionalidades mais básicas deste tema.
     O front-end será feito em Bootstrap, sendo aprimorado na medida do possível.
     Apenas três tipos de classes de passagem serão consideradas, primeira, executiva e economica.
+    Não foram levados em consideração voos com escala.
 
 <!-- Construir alguns protótipos para a aplicação, disponibilizá-los no Github e descrever o que foi considerado. //-->
 ### 4. Protótipo

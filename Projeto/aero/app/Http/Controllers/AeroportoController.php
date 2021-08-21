@@ -90,7 +90,7 @@ class AeroportoController extends Controller
     public function destroy(Aeroporto $aeroporto)
     {
         if($aeroporto->voosSaida->count() > 0 || $aeroporto->voosChegada->count() > 0){
-            return redirect()->route('aeroportos.index')->withDanger('Exclusão não permitida! Existem registros associadas.');
+            return redirect()->route('aeroportos.index')->withWarning('Exclusão não permitida! Existem registros associadas.');
         }
 
         $aeroporto->delete();

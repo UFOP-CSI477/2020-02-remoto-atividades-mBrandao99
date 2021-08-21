@@ -7,7 +7,7 @@
 
 ### Resumo
 
-    Meu trabalho se encaixa no contexto de sistemas de passagens áreas, a principal funcionalidade seria a compra/reserva de passagens.
+    Meu trabalho se encaixa no contexto de sistemas de passagens áreas, a principal funcionalidade seria a compra/reserva de passagens. Foi dado ao projeto o nome de Aero.
     Na tela principal, o usuário pode buscar por passagens para localidades de seu interesse, cada passagem leva o usuário à página de detalhes para que possa ser possível analisar os preços e fazer a compra. Os usuários com permissão mais elevada podem acessar os CRUDS das tabelas base, alterando os dados do sistema. O usuário pode cancelar suas passagens dentro do perfil.
 
 ### 1. Funcionalidades implementadas
@@ -21,7 +21,8 @@
     Filtros de intervalos, foi considerado datas fixas para filtragem da página principal. Durante o desenvolvimento notei que não fazia muito sentido a filtragem por horas, deixei o campo com a lógica similar a data.
 
 ### 3. Outras funcionalidades implementadas
-<!-- Descrever as funcionalidades implementas além daquelas que foram previstas, caso se aplique.  -->
+    Relatório de passagens por voos.
+    Eu também queria ter conseguido tempo para fazer um sistema de comentários e avaliações para voos das empresas, a migration está presente no projeto porém não foi implementado.
 
 ### 4. Principais desafios e dificuldades
     O CRUD da tabela principal de voos foi complexo de ser feito. Necessitou de recursos novos como o datetime picker, além da validação de todos os campos.
@@ -29,7 +30,23 @@
 
 ### 5. Instruções para instalação e execução
 <!-- Descrever o que deve ser feito para instalar (ou baixar) a aplicação, o que precisa ser configurando (parâmetros, banco de dados e afins) e como executá-la. -->
+    
 
+    WIP
+
+
+    Para puxar as bibliotecas e dependências necessárias, execute os comandos no terminal na raiz do projeto:
+    composer require
+    npm install
+    
+    Como não fiz a criação de métodos fábrica para as tabelas, vou estar linkando aqui o download da .env e do banco de dados
+    .
+    Para dar acesso às funcionalidades administrativas, não existe uma solução direta nas páginas.
+    Faço o registro de um usuário e execute a seguinte SQL no banco:
+        update users
+        set isAdmin = True
+        where email = "EMAIL"
+    Onde EMAIL corresponde ao email do usuário registrado anteriormente.
 ### 6. Referências
-<!-- Referências podem ser incluídas, caso necessário. Utilize o padrão ABNT. -->
+
 

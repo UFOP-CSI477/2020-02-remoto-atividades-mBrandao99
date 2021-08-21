@@ -94,7 +94,7 @@ class VooController extends Controller
     {
 
         if($voo->passagems->count() > 0) {
-            return redirect()->route('voos.index')->withDanger('Exclusão não permitida! Existem registros associadas.');
+            return redirect()->route('voos.index')->withWarning('Exclusão não permitida! Existem registros associadas.');
         }
 
         $voo->delete();

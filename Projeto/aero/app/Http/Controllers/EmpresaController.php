@@ -87,7 +87,7 @@ class EmpresaController extends Controller
     public function destroy(Empresa $empresa)
     {
         if ($empresa->voos->count() > 0) {
-            return redirect()->route('empresas.index')->withDanger('Exclusão não permitida! Existem registros associadas.');
+            return redirect()->route('empresas.index')->withWarning('Exclusão não permitida! Existem registros associadas.');
         }
 
         $empresa->delete();
