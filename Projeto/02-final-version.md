@@ -31,13 +31,18 @@
 ### 5. Instruções para instalação e execução
 <!-- Descrever o que deve ser feito para instalar (ou baixar) a aplicação, o que precisa ser configurando (parâmetros, banco de dados e afins) e como executá-la. -->
     Feito com Laravel Framework 8.54.0 e PHP 7.4.19. Banco de dados SQLite.
+    Node 14.15.5 e Composer 2.1.5.
 
     Para puxar as bibliotecas e dependências necessárias, execute os comandos no terminal na raiz do projeto:
-    composer require
-    npm install
+        npm install
+        composer install        
+        php artisan sweetalert:publish
+    Pode ser necessário habilitar extensões do PHP, como pdo_sqlite e intl. Verifique as dependências indicadas.
+    Após instalar todas as biliotecas, execute "npm run dev" para compilar os arquivos para seu sistema.
     
     Como não fiz a criação de métodos fábrica para popular as tabelas, vou estar linkando aqui o download da .env e do banco de dados para acesso imediato caso seja de interesse:
     https://mega.nz/file/70UhCA5R#M-RVxH5bebtsrFaqLLZuewBd4PmGhPMqw0jgj_D0BHc
+    Adicione os arquivos na raiz do projeto, abra o arquivo .env e ajuste o caminho até o banco
     Administrador: marco@email.com 123
 
     Em caso de configuração do zero, crie um banco .sqlite vazio e configure/adicione os parametros do banco no .env:
@@ -54,6 +59,8 @@
         set isAdmin = True
         where email = "EMAIL"
     Onde EMAIL corresponde ao email de um usuário registrado anteriormente.
+
+    Por fim, execute "php artisan serve" na raiz do projeto para inicializar o servidor.
 ### 6. Referências
 
 *Utilizei uma imagem genérica do google para fazer a logo do sistema, encontrei ela atrás de licensas em alguns sites mas livre em outros, então preferi não referenciar.*
