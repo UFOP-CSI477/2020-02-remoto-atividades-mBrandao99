@@ -1,5 +1,11 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PessoaController;
+use App\Http\Controllers\RegistroController;
+use App\Http\Controllers\UnidadeController;
+use App\Http\Controllers\VacinaController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +19,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'inicial'])->name('inicial');
+Route::get('/home', [HomeController::class, 'inicial'])->name('home');
+
+Route::get('/geral', [HomeController::class, 'geral'])->name('geral');
+Route::get('/geral/vacinadas', [HomeController::class, 'vacinadas'])->name('vacinadas');
+Route::get('/aplicacoes', [HomeController::class, 'aplicacoes'])->name('aplicacoes');
+
+Route::get('/admin', [HomeController::class, 'admin'])->name('admin')->middleware('auth');
+
+Route::resource('admin/pessoas', PessoaController::class)->middleware('auth');
+Route::resource('admin/unidades', UnidadeController::class)->middleware('auth');
+Route::resource('admin/vacinas', VacinaController::class)->middleware('auth');
+Route::resource('admin/registros', RegistroController::class)->middleware('auth');
