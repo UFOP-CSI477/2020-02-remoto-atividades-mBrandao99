@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PessoaStoreRequest;
 use App\Models\Pessoa;
 use Illuminate\Http\Request;
-
 class PessoaController extends Controller
 {
     /**
@@ -25,7 +25,7 @@ class PessoaController extends Controller
      */
     public function create()
     {
-        //
+        return view('pessoas.create');
     }
 
     /**
@@ -34,9 +34,10 @@ class PessoaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PessoaStoreRequest $request)
     {
-        //
+        Pessoa::create($request->all());
+        return redirect()->route('pessoas.index')->withSuccess('Pessoa cadastrada com sucesso!');;
     }
 
     /**
@@ -47,7 +48,7 @@ class PessoaController extends Controller
      */
     public function show(Pessoa $pessoa)
     {
-        //
+        return view('pessoas.show', ['pessoa' => $pessoa]);
     }
 
     /**
@@ -58,7 +59,7 @@ class PessoaController extends Controller
      */
     public function edit(Pessoa $pessoa)
     {
-        //
+        return view('pessoas.edit', ['pessoa' => $pessoa]);
     }
 
     /**
@@ -68,9 +69,11 @@ class PessoaController extends Controller
      * @param  \App\Models\Pessoa  $pessoa
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Pessoa $pessoa)
+    public function update(PessoaStoreRequest $request, Pessoa $pessoa)
     {
-        //
+        $pessoa->fill($request->all());
+        $pessoa->save();
+        return redirect()->route('pessoas.index')->withSuccess('Pessoa alterada com sucesso!');
     }
 
     /**
@@ -81,6 +84,11 @@ class PessoaController extends Controller
      */
     public function destroy(Pessoa $pessoa)
     {
-        //
+        if ($pessoa->registros->count() > 0) {
+            return redirect()->route('pessoas.index')->withWarning('Exclusão não permitida! Existem registros associadas.');
+        }
+
+        $pessoa->delete();
+        return redirect()->route('pessoas.index')->withSuccess('Pessoa excluída com sucesso!');
     }
 }

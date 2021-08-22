@@ -13,7 +13,7 @@
             <th>Pessoa</th>
             <th>Unidade</th>
             <th>Vacina</th>
-            <th>Doses</th>
+            <th>Dose</th>
             <th>Data</th>
             <th>Ações</th>
         </tr>
@@ -25,7 +25,7 @@
                 <td>{{ $r->pessoa->nome }}</td>
                 <td>{{ $r->unidade->nome }}</td>
                 <td>{{ $r->vacina->nome }}</td>
-                <td>{{ $r->doses }}</td>
+                <td>{{ $r->dose }}</td>
                 <td>{{ $r->data }}</td>
                 <td><a href="{{ route('registros.show', $r->id) }}">Exibir</a></td>
             </tr>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\VacinaStoreRequest;
 use App\Models\Vacina;
 use Illuminate\Http\Request;
 
@@ -25,7 +26,7 @@ class VacinaController extends Controller
      */
     public function create()
     {
-        //
+        return view('vacinas.create');
     }
 
     /**
@@ -36,7 +37,8 @@ class VacinaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Vacina::create($request->all());
+        return redirect()->route('vacinas.index')->withSuccess('Vacina cadastrada com sucesso!');
     }
 
     /**
@@ -47,7 +49,7 @@ class VacinaController extends Controller
      */
     public function show(Vacina $vacina)
     {
-        //
+        return view('vacinas.show', ['vacina' => $vacina]);
     }
 
     /**
@@ -58,7 +60,7 @@ class VacinaController extends Controller
      */
     public function edit(Vacina $vacina)
     {
-        //
+        return view('vacinas.edit', ['vacina' => $vacina]);
     }
 
     /**
@@ -68,9 +70,11 @@ class VacinaController extends Controller
      * @param  \App\Models\Vacina  $vacina
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Vacina $vacina)
+    public function update(VacinaStoreRequest $request, Vacina $vacina)
     {
-        //
+        $vacina->fill($request->all());
+        $vacina->save();
+        return redirect()->route('vacinas.index')->withSuccess('Vacina alterada com sucesso!');
     }
 
     /**
@@ -81,6 +85,11 @@ class VacinaController extends Controller
      */
     public function destroy(Vacina $vacina)
     {
-        //
+        if ($vacina->registros->count() > 0) {
+            return redirect()->route('vacinas.index')->withWarning('Exclusão não permitida! Existem registros associadas.');
+        }
+
+        $vacina->delete();
+        return redirect()->route('vacinas.index')->withSuccess('Vacina excluída com sucesso!');
     }
 }

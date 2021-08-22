@@ -13,6 +13,7 @@
             <th>Nome</th>
             <th>Cidade</th>
             <th>Bairro</th>
+            <th>Nascimento</th>
             <th>Ações</th>
         </tr>
     </thead>
@@ -23,6 +24,7 @@
                 <td>{{ $p->nome }}</td>
                 <td>{{ $p->cidade }}</td>
                 <td>{{ $p->bairro }}</td>
+                <td>{{ $p->data_nascimento }}</td>
                 <td><a href="{{ route('pessoas.show', $p->id) }}">Exibir</a></td>
             </tr>
         @endforeach

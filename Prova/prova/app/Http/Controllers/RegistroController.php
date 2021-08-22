@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\RegistroStoreRequest;
+use App\Models\Pessoa;
 use App\Models\Registro;
+use App\Models\Unidade;
+use App\Models\Vacina;
 use Illuminate\Http\Request;
 
 class RegistroController extends Controller
@@ -25,7 +29,10 @@ class RegistroController extends Controller
      */
     public function create()
     {
-        //
+        $pessoas = Pessoa::orderBy('nome')->get();
+        $vacinas = Vacina::orderBy('nome')->get();
+        $unidades = Unidade::orderBy('nome')->get();
+        return view('registros.create', ['pessoas' => $pessoas, 'vacinas' => $vacinas, 'unidades' => $unidades]);
     }
 
     /**
@@ -34,9 +41,10 @@ class RegistroController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(RegistroStoreRequest $request)
     {
-        //
+        Registro::create($request->all());
+        return redirect()->route('registros.index')->withSuccess('Registro cadastrado com sucesso!');
     }
 
     /**
@@ -47,7 +55,7 @@ class RegistroController extends Controller
      */
     public function show(Registro $registro)
     {
-        //
+        return view('registros.show', ['registro' => $registro]);
     }
 
     /**
@@ -58,7 +66,10 @@ class RegistroController extends Controller
      */
     public function edit(Registro $registro)
     {
-        //
+        $pessoas = Pessoa::orderBy('nome')->get();
+        $vacinas = Vacina::orderBy('nome')->get();
+        $unidades = Unidade::orderBy('nome')->get();
+        return view('registros.edit', ['registro' => $registro, 'pessoas' => $pessoas, 'vacinas' => $vacinas, 'unidades' => $unidades]);
     }
 
     /**
@@ -68,9 +79,11 @@ class RegistroController extends Controller
      * @param  \App\Models\Registro  $registro
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Registro $registro)
+    public function update(RegistroStoreRequest $request, Registro $registro)
     {
-        //
+        $registro->fill($request->all());
+        $registro->save();
+        return redirect()->route('registros.index')->withSuccess('Registro alterado com sucesso!');
     }
 
     /**
@@ -81,6 +94,7 @@ class RegistroController extends Controller
      */
     public function destroy(Registro $registro)
     {
-        //
+        $registro->delete();
+        return redirect()->route('registros.index')->withSuccess('Registro excluído com sucesso!');
     }
 }

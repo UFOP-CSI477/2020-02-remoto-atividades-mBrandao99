@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -18,9 +19,19 @@ class Registro extends Model
         'pessoa_id',
         'unidade_id',
         'vacina_id',
-        'doses',
+        'dose',
         'data',
     ];
+
+    public function setDataAttribute($value)
+    {
+        $this->attributes['data'] = Carbon::createFromFormat('d/m/Y', $value)->format('Y-m-d');
+    }
+
+    public function getDataAttribute($value)
+    {
+        return Carbon::createFromFormat('Y-m-d', $value)->format('d/m/Y');
+    }
 
     // 1 Registro -> 1 Pessoa
     public function pessoa() {
