@@ -24,7 +24,7 @@ class VacinaFactory extends Factory
         return [
             'nome' => ucfirst($this->faker->word()),
             'fabricante' => $this->faker->company(),
-            'doses' => $this->faker->numberBetween($min = 1, $max = 3),
+            'doses' => $this->faker->numberBetween(1, 3),
         ];
     }
 }

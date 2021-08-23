@@ -31,8 +31,10 @@ class UnidadeFactory extends Factory
      */
     public function definition()
     {
+        $prefixos = array("Hospital ", "Posto ", "Centro de Saúde " );
+        $i = array_rand($prefixos);
         return [
-            'nome' => $this->faker->lastName(),
+            'nome' => $prefixos[$i] . $this->faker->lastName(),
             'bairro' => $this->faker->cityPrefix(),
             'cidade' => $this->faker->city(),
         ];

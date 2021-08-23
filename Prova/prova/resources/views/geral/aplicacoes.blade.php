@@ -20,7 +20,7 @@
                 <tr>
                     <td>{{ $a['nome'] }}</td>
                     <td>{{ $a['total'] }}</td>
-                    <td>{{ round(($a['total'] * 100) / $total_geral) }}%</td>
+                    <td>{{ round(($a['total'] * 100) / $total_geral, 2) }}%</td>
                 </tr>
             @endforeach
         </tbody>

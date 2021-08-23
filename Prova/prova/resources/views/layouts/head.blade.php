@@ -12,6 +12,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta/js/bootstrap-select.min.js" integrity="sha512-I0sRMhP0loaoXaytYuOHHU3pGmyQklf5irZZ8cSaIPi9ETq5qvfcDAiBJ4vqpaq8xeUe7ZVwYM5xqQlxYDK3Uw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         window.confirmarExclusao = function(form) {
             Swal.fire({
@@ -37,7 +38,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta/css/bootstrap-select.min.css" integrity="sha512-S/noEArtFzz8UzFxmVcWfUy5f1zE6cmk7ny8spHuuhSuq9mPUZONHtO+U1Bna9tRn6kAo3mRIsWSsqWbWyhUQQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         html {
             overflow-y: scroll;

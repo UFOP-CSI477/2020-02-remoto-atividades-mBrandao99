@@ -110,6 +110,18 @@
     <script type="text/javascript">
         window.onload = function () {
             $('#data').mask('00/00/0000');
+
+            $('#pessoa_id').selectpicker({
+                liveSearch: true,
+                style: '',
+                styleBase: 'form-control',
+            });
+
+            $('#unidade_id').selectpicker({
+                liveSearch: true,
+                style: '',
+                styleBase: 'form-control',
+            });
         }
     </script>
 @endpush
