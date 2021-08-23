@@ -16,13 +16,21 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($aplicacoes as $a)
-                <tr>
-                    <td>{{ $a['nome'] }}</td>
-                    <td>{{ $a['total'] }}</td>
-                    <td>{{ round(($a['total'] * 100) / $total_geral, 2) }}%</td>
-                </tr>
-            @endforeach
+            @if($total_geral == 0)
+            <tr>
+                <td></td>
+                <td> Nenhum registro encontrado </td>
+                <td></td>
+            </tr>
+            @else
+                @foreach($aplicacoes as $a)
+                    <tr>
+                        <td>{{ $a['nome'] }}</td>
+                        <td>{{ $a['total'] }}</td>
+                        <td>{{ round(($a['total'] * 100) / $total_geral, 2) }}%</td>
+                    </tr>
+                @endforeach
+            @endif
         </tbody>
         <tfoot>
             <tr>

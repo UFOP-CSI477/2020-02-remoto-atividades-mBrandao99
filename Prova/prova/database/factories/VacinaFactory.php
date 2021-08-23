@@ -22,7 +22,7 @@ class VacinaFactory extends Factory
     public function definition()
     {
         return [
-            'nome' => ucfirst($this->faker->word()),
+            'nome' => ucfirst($this->faker->unique()->word()),
             'fabricante' => $this->faker->company(),
             'doses' => $this->faker->numberBetween(1, 3),
         ];
