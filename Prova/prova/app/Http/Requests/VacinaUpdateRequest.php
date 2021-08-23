@@ -3,8 +3,9 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
-class VacinaStoreRequest extends FormRequest
+class VacinaUpdateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,7 +25,7 @@ class VacinaStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'nome' => ['required', 'string', 'unique:vacinas,nome', 'max:100'],
+            'nome' => ['required', 'string', Rule::unique('vacinas')->ignore($this->vacina->nome, 'nome'), 'max:100'],
             'fabricante' => ['required', 'string', 'max:100'],
             'doses' => ['required', 'int', 'between:1,3'],
         ];

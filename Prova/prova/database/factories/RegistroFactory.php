@@ -28,8 +28,8 @@ class RegistroFactory extends Factory
             'pessoa_id' => Pessoa::factory(),
             'unidade_id' => Unidade::factory(),
             'vacina_id' => Vacina::factory(),
-            'doses' => $this->faker->numberBetween($min = 1, $max = 3),
-            'data' => $this->faker->date(),
+            'dose' => $this->faker->numberBetween($min = 0, $max = 3),
+            'data' => $this->faker->date('d/m/Y'),
         ];
     }
 }

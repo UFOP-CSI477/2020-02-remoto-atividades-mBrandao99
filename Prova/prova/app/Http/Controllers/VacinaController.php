@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\VacinaStoreRequest;
+use App\Http\Requests\VacinaUpdateRequest;
 use App\Models\Vacina;
 use Illuminate\Http\Request;
 
@@ -35,7 +36,7 @@ class VacinaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(VacinaStoreRequest $request)
     {
         Vacina::create($request->all());
         return redirect()->route('vacinas.index')->withSuccess('Vacina cadastrada com sucesso!');
@@ -70,7 +71,7 @@ class VacinaController extends Controller
      * @param  \App\Models\Vacina  $vacina
      * @return \Illuminate\Http\Response
      */
-    public function update(VacinaStoreRequest $request, Vacina $vacina)
+    public function update(VacinaUpdateRequest $request, Vacina $vacina)
     {
         $vacina->fill($request->all());
         $vacina->save();

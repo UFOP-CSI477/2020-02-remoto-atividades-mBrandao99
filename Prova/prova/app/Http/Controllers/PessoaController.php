@@ -37,7 +37,7 @@ class PessoaController extends Controller
     public function store(PessoaStoreRequest $request)
     {
         Pessoa::create($request->all());
-        return redirect()->route('pessoas.index')->withSuccess('Pessoa cadastrada com sucesso!');;
+        return redirect()->route('pessoas.index')->withSuccess('Pessoa cadastrada com sucesso!');
     }
 
     /**

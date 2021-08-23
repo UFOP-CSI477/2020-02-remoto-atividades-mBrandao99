@@ -36,7 +36,7 @@ class PessoaFactory extends Factory
             'nome' => $this->faker->name(),
             'bairro' => $this->faker->cityPrefix(),
             'cidade' => $this->faker->city(),
-            'data_nascimento' => $this->faker->date(),
+            'data_nascimento' => $this->faker->date('d/m/Y'),
         ];
     }
 }
