@@ -13,7 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                        Acesse as páginas pelo menu de navegação superior
+                        Acesse as páginas pelo menu de navegação superior.
                 </div>
             </div>
         </div>
